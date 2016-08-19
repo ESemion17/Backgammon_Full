@@ -1,0 +1,18 @@
+1) You failed to decouple the UI from logic, by introducing the 'Panel.PrintToConsole' method as a part of the logic assembly.
+Do note that when implementing an engine, you should never couple it with a specific UI technology. This was also an explicit requirement.
+
+2) You implemented a part of the game engine logic in the UI - the NextPlayer method should be invoked by the game engine itself,
+whenever the current player is out of valid moves- it should not be up to the UI to decide this-
+nor should the engine depend on the UI in order th properly function.
+
+3)Unfortunately your game is not playable.. I could not get it to accept any move as legal.
+You probably have some kind of bug in the system.
+
+4)Overall - you have kept a clean and minimal design.
+
+5)Clarity of code is an integral part of writing high quality software which stands the test of time.
+You are definitely on your way there, but consider shortening methods, dividing long methods into shorter ones and giving them good names which describe what they do.
+This will also make tracing bugs a lot easier since each method is small and well defined.
+Exammple: 'GameEngine.IsLegalToMoveHome' is everything you should avoid.
+
+6)Avoid magic numbers - constant integers in the code. this hinders readability.
