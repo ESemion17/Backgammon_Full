@@ -13,6 +13,5 @@ namespace Logic
         int[] AtHome { get; set; }
         Player PlayingNow { get; set; }
         void NextPlayer();
-        void PrintToConsole(IEnumerable<int> cubes);
     }
 }
